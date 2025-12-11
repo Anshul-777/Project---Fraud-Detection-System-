@@ -24,3 +24,128 @@
       "name": "Normal Business Network",
       "risk_level": "low",
       "nodes": [
+        { "id": "u_101", "label": "Arjun R.", "type": "user", "risk_score": 15 },
+        { "id": "u_104", "label": "Priya P.", "type": "user", "risk_score": 12 },
+        { "id": "u_105", "label": "Vikram M.", "type": "user", "risk_score": 8 },
+        { "id": "u_108", "label": "Meera R.", "type": "user", "risk_score": 18 },
+        { "id": "m_200", "label": "ElectroMart", "type": "merchant", "risk_score": 5 },
+        { "id": "m_208", "label": "LuxuryWatch", "type": "merchant", "risk_score": 8 }
+      ],
+      "edges": [
+        { "from": "u_101", "to": "m_200", "amount": 1250.5, "timestamp": "2025-12-07T12:34:56Z", "type": "transaction" },
+        { "from": "u_105", "to": "u_104", "amount": 50000, "timestamp": "2025-12-07T12:20:00Z", "type": "transaction" },
+        { "from": "u_108", "to": "u_101", "amount": 25000, "timestamp": "2025-12-07T11:55:00Z", "type": "transaction" },
+        { "from": "u_101", "to": "m_208", "amount": 75000, "timestamp": "2025-12-07T11:45:00Z", "type": "transaction" }
+      ]
+    },
+    {
+      "cluster_id": "cluster_003",
+      "name": "Student Network",
+      "risk_level": "low",
+      "nodes": [
+        { "id": "u_102", "label": "Neha S.", "type": "user", "risk_score": 22 },
+        { "id": "u_106", "label": "Ananya K.", "type": "user", "risk_score": 45 },
+        { "id": "m_203", "label": "BookStore", "type": "merchant", "risk_score": 3 },
+        { "id": "m_205", "label": "FoodDelivery", "type": "merchant", "risk_score": 2 }
+      ],
+      "edges": [
+        { "from": "u_102", "to": "m_205", "amount": 299, "timestamp": "2025-12-07T12:05:00Z", "type": "transaction" },
+        { "from": "u_106", "to": "m_203", "amount": 150, "timestamp": "2025-12-07T12:15:00Z", "type": "transaction" },
+        { "from": "u_102", "to": "u_106", "amount": 500, "timestamp": "2025-12-05T09:00:00Z", "type": "transaction" }
+      ]
+    }
+  ],
+  "modelInsights": {
+    "model_version": "xgb_v2.1",
+    "precision_at_k": 0.89,
+    "recall": 0.92,
+    "pr_auc": 0.94,
+    "f1_score": 0.905,
+    "accuracy": 0.96,
+    "confusion_matrix": {
+      "true_positive": 234,
+      "false_positive": 28,
+      "true_negative": 4521,
+      "false_negative": 19
+    },
+    "global_shap": [
+      { "feature": "velocity_5min", "importance": 0.182 },
+      { "feature": "geo_mismatch", "importance": 0.156 },
+      { "feature": "device_trust_score", "importance": 0.143 },
+      { "feature": "merchant_risk_category", "importance": 0.128 },
+      { "feature": "amount_zscore", "importance": 0.097 },
+      { "feature": "account_age_days", "importance": 0.085 },
+      { "feature": "time_since_last_tx", "importance": 0.072 },
+      { "feature": "ip_reputation", "importance": 0.068 },
+      { "feature": "session_duration", "importance": 0.045 },
+      { "feature": "historical_fraud_rate", "importance": 0.024 }
+    ],
+    "rules_version": "rules_v1.3",
+    "last_trained": "2025-12-01T00:00:00Z"
+  },
+  "analyticsData": {
+    "alertsOverTime": [
+      { "date": "2025-12-01", "high": 5, "medium": 12, "low": 28 },
+      { "date": "2025-12-02", "high": 3, "medium": 15, "low": 32 },
+      { "date": "2025-12-03", "high": 7, "medium": 18, "low": 25 },
+      { "date": "2025-12-04", "high": 4, "medium": 14, "low": 30 },
+      { "date": "2025-12-05", "high": 8, "medium": 20, "low": 35 },
+      { "date": "2025-12-06", "high": 6, "medium": 16, "low": 29 },
+      { "date": "2025-12-07", "high": 4, "medium": 11, "low": 22 }
+    ],
+    "alertsBySeverity": [
+      { "severity": "High", "count": 37 },
+      { "severity": "Medium", "count": 106 },
+      { "severity": "Low", "count": 201 }
+    ],
+    "geoDistribution": [
+      { "country": "IN", "count": 4250, "fraudRate": 0.8 },
+      { "country": "US", "count": 320, "fraudRate": 2.1 },
+      { "country": "UK", "count": 180, "fraudRate": 1.5 },
+      { "country": "RU", "count": 45, "fraudRate": 15.2 },
+      { "country": "CN", "count": 28, "fraudRate": 8.5 }
+    ],
+    "riskDistribution": [
+      { "range": "0-25", "count": 3800 },
+      { "range": "25-50", "count": 650 },
+      { "range": "50-75", "count": 280 },
+      { "range": "75-100", "count": 93 }
+    ],
+    "hourlyPattern": [
+      { "hour": 0, "transactions": 120, "frauds": 3 },
+      { "hour": 1, "transactions": 85, "frauds": 2 },
+      { "hour": 2, "transactions": 45, "frauds": 4 },
+      { "hour": 3, "transactions": 32, "frauds": 5 },
+      { "hour": 4, "transactions": 28, "frauds": 3 },
+      { "hour": 5, "transactions": 42, "frauds": 1 },
+      { "hour": 6, "transactions": 95, "frauds": 2 },
+      { "hour": 7, "transactions": 180, "frauds": 3 },
+      { "hour": 8, "transactions": 320, "frauds": 4 },
+      { "hour": 9, "transactions": 480, "frauds": 5 },
+      { "hour": 10, "transactions": 550, "frauds": 6 },
+      { "hour": 11, "transactions": 620, "frauds": 7 },
+      { "hour": 12, "transactions": 580, "frauds": 5 },
+      { "hour": 13, "transactions": 520, "frauds": 4 },
+      { "hour": 14, "transactions": 490, "frauds": 5 },
+      { "hour": 15, "transactions": 510, "frauds": 6 },
+      { "hour": 16, "transactions": 540, "frauds": 5 },
+      { "hour": 17, "transactions": 580, "frauds": 7 },
+      { "hour": 18, "transactions": 650, "frauds": 8 },
+      { "hour": 19, "transactions": 720, "frauds": 9 },
+      { "hour": 20, "transactions": 680, "frauds": 7 },
+      { "hour": 21, "transactions": 520, "frauds": 6 },
+      { "hour": 22, "transactions": 380, "frauds": 8 },
+      { "hour": 23, "transactions": 220, "frauds": 5 }
+    ]
+  },
+  "kpiMetrics": {
+    "activeTxPerSecond": 12.5,
+    "openAlertsHigh": 4,
+    "openAlertsMedium": 11,
+    "openAlertsLow": 22,
+    "confirmedFraudsToday": 3,
+    "avgRiskScore": 24.7,
+    "totalTransactionsToday": 4823,
+    "blockedAmount": 152498
+  }
+}
