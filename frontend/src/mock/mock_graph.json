@@ -1,0 +1,26 @@
+{
+  "clusters": [
+    {
+      "cluster_id": "cluster_001",
+      "name": "Suspected Mule Ring A",
+      "risk_level": "high",
+      "nodes": [
+        { "id": "u_109", "label": "Karan S.", "type": "user", "risk_score": 62 },
+        { "id": "u_110", "label": "Sunita D.", "type": "user", "risk_score": 55 },
+        { "id": "m_210", "label": "SuspiciousVendor", "type": "merchant", "risk_score": 92 },
+        { "id": "dev_ks_2", "label": "Unknown Device", "type": "device", "risk_score": 88 },
+        { "id": "ip_ru_1", "label": "185.220.101.x", "type": "ip", "risk_score": 95 }
+      ],
+      "edges": [
+        { "from": "u_109", "to": "m_210", "amount": 49999, "timestamp": "2025-12-06T23:30:00Z", "type": "transaction" },
+        { "from": "u_109", "to": "dev_ks_2", "amount": 0, "timestamp": "2025-12-06T23:25:00Z", "type": "device_login" },
+        { "from": "dev_ks_2", "to": "ip_ru_1", "amount": 0, "timestamp": "2025-12-06T23:25:00Z", "type": "network" },
+        { "from": "u_110", "to": "u_109", "amount": 5000, "timestamp": "2025-12-05T10:00:00Z", "type": "transaction" },
+        { "from": "m_210", "to": "ip_ru_1", "amount": 0, "timestamp": "2025-12-06T00:00:00Z", "type": "association" }
+      ]
+    },
+    {
+      "cluster_id": "cluster_002",
+      "name": "Normal Business Network",
+      "risk_level": "low",
+      "nodes": [
