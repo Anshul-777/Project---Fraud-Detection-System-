@@ -1,0 +1,211 @@
+{
+  "users": [
+    {
+      "id": "u_101",
+      "email": "pro@example.com",
+      "password": "ProUser!2025",
+      "displayName": "Arjun Rao",
+      "role": "user",
+      "kycLevel": "premium",
+      "accountAge": 730,
+      "balance": 1000000,
+      "currency": "INR",
+      "bankAccount": {
+        "bankId": "AEGIS-PROD-001",
+        "bankName": "Aegis Bank",
+        "accountNumber": "PROD-001",
+        "ifsc": "AEGS0001234",
+        "holderName": "Arjun Rao",
+        "verified": true
+      },
+      "devices": [
+        { "id": "dev_ar_1", "name": "iPhone 15 Pro", "type": "mobile", "lastUsed": "2025-12-07T10:30:00Z", "trusted": true, "ip": "103.23.44.55", "country": "IN" },
+        { "id": "dev_ar_2", "name": "MacBook Pro", "type": "desktop", "lastUsed": "2025-12-06T18:00:00Z", "trusted": true, "ip": "103.23.44.60", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T10:30:00Z",
+      "riskScore": 15,
+      "transactionCount": 342,
+      "createdAt": "2023-12-07T00:00:00Z"
+    },
+    {
+      "id": "u_102",
+      "email": "student@example.com",
+      "password": "Stud!2025",
+      "displayName": "Neha Singh",
+      "role": "user",
+      "kycLevel": "verified",
+      "accountAge": 365,
+      "balance": 10000,
+      "currency": "INR",
+      "bankAccount": {
+        "bankId": "AEGIS-STU-001",
+        "bankName": "Aegis Bank",
+        "accountNumber": "STU-001",
+        "ifsc": "AEGS0005678",
+        "holderName": "Neha Singh",
+        "verified": true
+      },
+      "devices": [
+        { "id": "dev_ns_1", "name": "Samsung Galaxy S24", "type": "mobile", "lastUsed": "2025-12-07T09:15:00Z", "trusted": true, "ip": "182.66.12.88", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T09:15:00Z",
+      "riskScore": 22,
+      "transactionCount": 87,
+      "createdAt": "2024-12-07T00:00:00Z"
+    },
+    {
+      "id": "u_103",
+      "email": "rahul.sharma@mail.com",
+      "password": "hidden",
+      "displayName": "Rahul Sharma",
+      "role": "user",
+      "kycLevel": "basic",
+      "accountAge": 180,
+      "balance": 45000,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_rs_1", "name": "OnePlus 12", "type": "mobile", "lastUsed": "2025-12-07T08:45:00Z", "trusted": true, "ip": "49.36.78.120", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T08:45:00Z",
+      "riskScore": 35,
+      "transactionCount": 56,
+      "createdAt": "2025-06-10T00:00:00Z"
+    },
+    {
+      "id": "u_104",
+      "email": "priya.patel@work.co",
+      "password": "hidden",
+      "displayName": "Priya Patel",
+      "role": "user",
+      "kycLevel": "verified",
+      "accountAge": 540,
+      "balance": 250000,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_pp_1", "name": "iPhone 14", "type": "mobile", "lastUsed": "2025-12-07T11:00:00Z", "trusted": true, "ip": "223.176.45.89", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T11:00:00Z",
+      "riskScore": 12,
+      "transactionCount": 189,
+      "createdAt": "2024-06-20T00:00:00Z"
+    },
+    {
+      "id": "u_105",
+      "email": "vikram.mehta@biz.in",
+      "password": "hidden",
+      "displayName": "Vikram Mehta",
+      "role": "user",
+      "kycLevel": "premium",
+      "accountAge": 900,
+      "balance": 875000,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_vm_1", "name": "Pixel 8 Pro", "type": "mobile", "lastUsed": "2025-12-07T07:30:00Z", "trusted": true, "ip": "117.200.32.156", "country": "IN" },
+        { "id": "dev_vm_2", "name": "Windows Laptop", "type": "desktop", "lastUsed": "2025-12-06T22:00:00Z", "trusted": true, "ip": "117.200.32.160", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T07:30:00Z",
+      "riskScore": 8,
+      "transactionCount": 445,
+      "createdAt": "2023-06-15T00:00:00Z"
+    },
+    {
+      "id": "u_106",
+      "email": "ananya.kumar@edu.in",
+      "password": "hidden",
+      "displayName": "Ananya Kumar",
+      "role": "user",
+      "kycLevel": "basic",
+      "accountAge": 90,
+      "balance": 5500,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_ak_1", "name": "Redmi Note 13", "type": "mobile", "lastUsed": "2025-12-07T10:00:00Z", "trusted": true, "ip": "59.89.124.67", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T10:00:00Z",
+      "riskScore": 45,
+      "transactionCount": 23,
+      "createdAt": "2025-09-08T00:00:00Z"
+    },
+    {
+      "id": "u_107",
+      "email": "deepak.joshi@corp.com",
+      "password": "hidden",
+      "displayName": "Deepak Joshi",
+      "role": "user",
+      "kycLevel": "verified",
+      "accountAge": 450,
+      "balance": 120000,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_dj_1", "name": "iPhone 13", "type": "mobile", "lastUsed": "2025-12-07T06:45:00Z", "trusted": true, "ip": "14.139.56.78", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T06:45:00Z",
+      "riskScore": 28,
+      "transactionCount": 134,
+      "createdAt": "2024-09-15T00:00:00Z"
+    },
+    {
+      "id": "u_108",
+      "email": "meera.reddy@shop.in",
+      "password": "hidden",
+      "displayName": "Meera Reddy",
+      "role": "user",
+      "kycLevel": "premium",
+      "accountAge": 600,
+      "balance": 350000,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_mr_1", "name": "Samsung S23", "type": "mobile", "lastUsed": "2025-12-07T09:30:00Z", "trusted": true, "ip": "203.110.89.45", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T09:30:00Z",
+      "riskScore": 18,
+      "transactionCount": 267,
+      "createdAt": "2024-04-10T00:00:00Z"
+    },
+    {
+      "id": "u_109",
+      "email": "karan.singh@trade.co",
+      "password": "hidden",
+      "displayName": "Karan Singh",
+      "role": "user",
+      "kycLevel": "verified",
+      "accountAge": 300,
+      "balance": 78000,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_ks_1", "name": "Vivo X90", "type": "mobile", "lastUsed": "2025-12-07T08:00:00Z", "trusted": true, "ip": "45.115.67.123", "country": "IN" },
+        { "id": "dev_ks_2", "name": "Unknown Device", "type": "mobile", "lastUsed": "2025-12-06T23:30:00Z", "trusted": false, "ip": "185.220.101.45", "country": "RU" }
+      ],
+      "lastLogin": "2025-12-07T08:00:00Z",
+      "riskScore": 62,
+      "transactionCount": 98,
+      "createdAt": "2025-02-10T00:00:00Z"
+    },
+    {
+      "id": "u_110",
+      "email": "sunita.devi@local.in",
+      "password": "hidden",
+      "displayName": "Sunita Devi",
+      "role": "user",
+      "kycLevel": "basic",
+      "accountAge": 60,
+      "balance": 8200,
+      "currency": "INR",
+      "devices": [
+        { "id": "dev_sd_1", "name": "Realme 11", "type": "mobile", "lastUsed": "2025-12-07T10:45:00Z", "trusted": true, "ip": "122.168.45.89", "country": "IN" }
+      ],
+      "lastLogin": "2025-12-07T10:45:00Z",
+      "riskScore": 55,
+      "transactionCount": 15,
+      "createdAt": "2025-10-08T00:00:00Z"
+    }
+  ],
+  "admin": {
+    "id": "123",
+    "password": "G!7rX9$Qw#Z8!",
+    "displayName": "Admin User",
+    "role": "admin"
+  },
+  "platformPin": "864291",
+  "defaultOtp": "123456"
+}
